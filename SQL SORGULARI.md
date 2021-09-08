@@ -41,7 +41,7 @@ SELECT * FROM film
 WHERE (rental_rate IN(0.99,2.99,4.99)) AND (replacement_cost IN(12.99,15.99,28.99));
 ```
 
-# Odev-3
+## Odev-3
 
 ```
 SELECT country FROM country
@@ -61,4 +61,29 @@ WHERE title ILIKE '%T%T%T%T%';
 ```
 SELECT * FROM film
 WHERE title LIKE 'C%' AND length>90 AND rental_rate=2.99;
+```
+
+## Odev-4
+
+```
+SELECT DISTINCT replacement_cost FROM film;
+```
+
+```
+SELECT COUNT(DISTINCT replacement_cost) FROM film;
+```
+
+```
+SELECT COUNT(*) FROM film 
+WHERE title LIKE 'T%' AND rating='G';
+```
+
+```
+SELECT COUNT(*) FROM country
+WHERE country LIKE '_____';
+```
+
+```
+SELECT COUNT(*) FROM city
+WHERE city ILIKE '%r';
 ```
